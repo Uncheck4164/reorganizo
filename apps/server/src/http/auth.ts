@@ -3,7 +3,7 @@ import type { Context, Next } from "hono";
 import { getCookie, setCookie } from "hono/cookie";
 import { config } from "../config.js";
 
-const COOKIE = "roganizo_session";
+const COOKIE = "reorganizo_session";
 const MAX_AGE_DAYS = 30;
 
 function sign(payload: string): string {

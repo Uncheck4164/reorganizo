@@ -1,11 +1,11 @@
 {
-  "name": "@roganizo/mcp",
+  "name": "@reorganizo/mcp",
   "private": true,
   "version": "0.1.0",
   "license": "MIT",
   "type": "module",
   "bin": {
-    "roganizo-mcp": "dist/index.js"
+    "reorganizo-mcp": "dist/index.js"
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",

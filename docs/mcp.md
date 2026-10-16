@@ -1,6 +1,6 @@
 # MCP server
 
-`apps/mcp` exposes a running Roganizo instance to an MCP client (Claude Code, Claude Desktop,
+`apps/mcp` exposes a running Reorganizo instance to an MCP client (Claude Code, Claude Desktop,
 any other) so an assistant can read the instance directly instead of being told what it shows.
 
 It wraps the HTTP API the web panel already uses: it logs in with the web password, keeps the
@@ -89,10 +89,10 @@ cp apps/mcp/.env.example apps/mcp/.env   # then fill it in
 
 `apps/mcp/.env` takes two values:
 
-- `ROGANIZO_URL` — base URL of the instance. Defaults to `http://localhost:8080`.
-- `ROGANIZO_PASSWORD` — the web password **of that instance**. A deployed instance keeps its
+- `REORGANIZO_URL` — base URL of the instance. Defaults to `http://localhost:8080`.
+- `REORGANIZO_PASSWORD` — the web password **of that instance**. A deployed instance keeps its
   password in its own database, so it is usually not the `WEB_PASSWORD` in your local `.env`
-  (which is what the MCP falls back to when `ROGANIZO_PASSWORD` is unset, so a local checkout
+  (which is what the MCP falls back to when `REORGANIZO_PASSWORD` is unset, so a local checkout
   works with no configuration at all).
 
 The root `.gitignore` ignores `.env` at any depth, so the password stays out of the repository.
@@ -100,11 +100,11 @@ The root `.gitignore` ignores `.env` at any depth, so the password stays out of 
 Then register the server with your client. In Claude Code:
 
 ```bash
-claude mcp add roganizo --scope user -- node /absolute/path/to/apps/mcp/dist/index.js
+claude mcp add reorganizo --scope user -- node /absolute/path/to/apps/mcp/dist/index.js
 ```
 
 Check it with `claude mcp list`, which health-checks every server and should report
-`roganizo — ✔ Connected`.
+`reorganizo — ✔ Connected`.
 
 Use an **absolute** path and `--scope user`. A project-scoped `.mcp.json` works too, but its
 command is resolved against the working directory, so it only starts when the client was opened

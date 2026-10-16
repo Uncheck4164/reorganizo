@@ -69,7 +69,7 @@ export const settingsSchema = z.object({
   // urgent reminders. Empty = no calls (message retries only).
   CALLMEBOT_USER: z.string().default(""),
   BRIEFING_TIME: z.string().regex(CLOCK_TIME).or(z.literal("")).default("07:30"),
-  DATABASE_PATH: z.string().default("./data/roganizo.db"),
+  DATABASE_PATH: z.string().default("./data/reorganizo.db"),
   // Language of every user-facing string (bot messages, briefing, agent replies).
   LANGUAGE: z.enum(["es", "en"]).default("es"),
 }).superRefine((s, ctx) => {
@@ -132,7 +132,7 @@ export const looseSettingsSchema = z.object({
     .catch("America/Santiago"),
   CALLMEBOT_USER: z.string().default("").catch(""),
   BRIEFING_TIME: z.string().regex(CLOCK_TIME).or(z.literal("")).default("07:30").catch("07:30"),
-  DATABASE_PATH: z.string().default("./data/roganizo.db").catch("./data/roganizo.db"),
+  DATABASE_PATH: z.string().default("./data/reorganizo.db").catch("./data/reorganizo.db"),
   LANGUAGE: z.enum(["es", "en"]).default("es").catch("es"),
 });
 

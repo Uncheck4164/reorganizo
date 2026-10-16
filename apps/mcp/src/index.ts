@@ -2,7 +2,7 @@ import { McpServer, type CallToolResult } from "@modelcontextprotocol/server";
 import { serveStdio } from "@modelcontextprotocol/server/stdio";
 import * as z from "zod/v4";
 import { readConfig } from "./config.js";
-import { RoganizoClient, type Fetched } from "./client.js";
+import { ReorganizoClient, type Fetched } from "./client.js";
 
 // Tools declare their input as a raw shape rather than the z.object() the SDK
 // docs prefer: that overload wants a schema exposing `~standard.jsonSchema`, and
@@ -10,7 +10,7 @@ import { RoganizoClient, type Fetched } from "./client.js";
 // zod does — the runtime behaviour is identical, the SDK wraps the shape itself.
 
 const config = readConfig();
-const client = new RoganizoClient(config.url, config.password);
+const client = new ReorganizoClient(config.url, config.password);
 
 const pad = (n: number) => String(n).padStart(2, "0");
 const isoDate = (d: Date) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
@@ -40,7 +40,7 @@ function resolveRange(from?: string, to?: string, days = 7): { from: string; to:
 }
 
 function createServer(): McpServer {
-  const server = new McpServer({ name: "roganizo", version: "0.1.0" });
+  const server = new McpServer({ name: "reorganizo", version: "0.1.0" });
 
   server.registerTool(
     "status",
@@ -307,4 +307,4 @@ function createServer(): McpServer {
 }
 
 void serveStdio(createServer);
-console.error(`roganizo MCP server on stdio → ${config.url}`);
+console.error(`reorganizo MCP server on stdio → ${config.url}`);

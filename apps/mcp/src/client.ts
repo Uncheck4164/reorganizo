@@ -1,4 +1,4 @@
-const SESSION_COOKIE = "roganizo_session";
+const SESSION_COOKIE = "reorganizo_session";
 
 /**
  * A finished request. Failures are values, not exceptions: the whole point of
@@ -17,7 +17,7 @@ function truncate(text: string): string {
   return flat.length > MAX_BODY ? `${flat.slice(0, MAX_BODY)}… (${flat.length} bytes)` : flat;
 }
 
-export class RoganizoClient {
+export class ReorganizoClient {
   #cookie: string | undefined;
 
   constructor(
@@ -35,7 +35,7 @@ export class RoganizoClient {
       return {
         ok: false,
         reason:
-          "No password configured. Set ROGANIZO_PASSWORD (see apps/mcp/.env.example) to the web password of this instance.",
+          "No password configured. Set REORGANIZO_PASSWORD (see apps/mcp/.env.example) to the web password of this instance.",
       };
     }
     let res: Response;

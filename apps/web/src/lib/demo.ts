@@ -275,9 +275,9 @@ function settings(lang: Lang): SettingsPayload {
       OPENROUTER_SORT: "auto",
       GOOGLE_CLIENT_ID: "918273645012-a7f3k9d2m.apps.googleusercontent.com",
       GOOGLE_CLIENT_SECRET: "",
-      PUBLIC_URL: "https://roganizo.demo.dev",
+      PUBLIC_URL: "https://reorganizo.demo.dev",
       PORT: "8080",
-      DATABASE_PATH: "/data/roganizo.db",
+      DATABASE_PATH: "/data/reorganizo.db",
       WEB_PASSWORD: "",
       TIMEZONE: "America/Santiago",
       BRIEFING_TIME: "07:30",
@@ -329,15 +329,15 @@ export function demoFetch<T>(url: string): Promise<T> {
   } else if (path === "/api/settings") {
     data = settings(lang);
   } else if (path === "/api/setup/telegram/check") {
-    data = { ok: true, username: "roganizo_demo_bot", name: "Roganizo Demo" } satisfies TelegramCheckResult;
+    data = { ok: true, username: "reorganizo_demo_bot", name: "Reorganizo Demo" } satisfies TelegramCheckResult;
   } else if (path === "/api/setup/telegram/link") {
     data = u.searchParams.get("action") === "start"
-      ? ({ ok: true, link: "https://t.me/roganizo_demo_bot?start=demo", username: "roganizo_demo_bot", expiresAt: new Date(Date.now() + 600_000).toISOString() } satisfies TelegramLinkResult)
+      ? ({ ok: true, link: "https://t.me/reorganizo_demo_bot?start=demo", username: "reorganizo_demo_bot", expiresAt: new Date(Date.now() + 600_000).toISOString() } satisfies TelegramLinkResult)
       : ({ status: "linked", userId: 482915773, name: "Rogan" } satisfies TelegramLinkStatus);
   } else if (path === "/api/setup/llm/check") {
     data = { ok: true, provider: "openrouter", model: "deepseek/deepseek-v4-flash-0731", latencyMs: 420 } satisfies LlmCheckResult;
   } else if (path === "/api/setup/google") {
-    data = { redirectUri: "https://roganizo.demo.dev/oauth/callback", clientConfigured: true, connected: true } satisfies GoogleSetupInfo;
+    data = { redirectUri: "https://reorganizo.demo.dev/oauth/callback", clientConfigured: true, connected: true } satisfies GoogleSetupInfo;
   } else if (path === "/api/setup/google/check") {
     data = { ok: true, calendar: "ok", tasks: "ok" } satisfies GoogleCheckResult;
   } else if (path === "/api/events") {

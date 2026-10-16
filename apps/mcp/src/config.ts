@@ -25,16 +25,16 @@ loadDotEnv(path.join(mcpRoot, ".env"));
 loadDotEnv(path.resolve(mcpRoot, "../..", ".env"));
 
 export interface McpConfig {
-  /** Base URL of the Roganizo instance, no trailing slash. */
+  /** Base URL of the Reorganizo instance, no trailing slash. */
   url: string;
   /** Web password. Undefined means every authenticated tool will say so. */
   password: string | undefined;
 }
 
 export function readConfig(): McpConfig {
-  const url = (process.env.ROGANIZO_URL ?? "http://localhost:8080").replace(/\/+$/, "");
+  const url = (process.env.REORGANIZO_URL ?? "http://localhost:8080").replace(/\/+$/, "");
   // WEB_PASSWORD is the key the server itself uses: falling back to it makes a
-  // local checkout work, but a deployed instance needs its own ROGANIZO_PASSWORD.
-  const password = process.env.ROGANIZO_PASSWORD || process.env.WEB_PASSWORD || undefined;
+  // local checkout work, but a deployed instance needs its own REORGANIZO_PASSWORD.
+  const password = process.env.REORGANIZO_PASSWORD || process.env.WEB_PASSWORD || undefined;
   return { url, password };
 }

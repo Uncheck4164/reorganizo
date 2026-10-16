@@ -35,7 +35,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build static demo
-        run: pnpm --filter @roganizo/web build
+        run: pnpm --filter @reorganizo/web build
         env:
           VITE_DEMO: "1"
 

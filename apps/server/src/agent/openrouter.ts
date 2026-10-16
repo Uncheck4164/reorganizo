@@ -153,7 +153,7 @@ export async function singleCall(
         Authorization: `Bearer ${config.OPENROUTER_API_KEY}`,
         "Content-Type": "application/json",
         "HTTP-Referer": config.PUBLIC_URL,
-        "X-Title": "Roganizo",
+        "X-Title": "Reorganizo",
       },
       body: JSON.stringify({
         model,

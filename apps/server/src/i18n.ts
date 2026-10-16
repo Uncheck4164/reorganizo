@@ -11,9 +11,9 @@ import { config } from "./config.js";
 
 const es = {
   startNeedsGoogle:
-    "¡Hola! Soy Roganizo 🗓\n\nPara empezar necesito acceso a tu Google Calendar y Google Tasks. Entra aquí y acepta:\n{url}\n\nCuando termines, mándame tu horario o lo que necesites.",
+    "¡Hola! Soy Reorganizo 🗓\n\nPara empezar necesito acceso a tu Google Calendar y Google Tasks. Entra aquí y acepta:\n{url}\n\nCuando termines, mándame tu horario o lo que necesites.",
   startReady:
-    "¡Hola! Soy Roganizo 🗓 Cuéntame qué necesitas: crear tu horario, agendar algo, un recordatorio, una nota o un to-do.",
+    "¡Hola! Soy Reorganizo 🗓 Cuéntame qué necesitas: crear tu horario, agendar algo, un recordatorio, una nota o un to-do.",
   webPanel: "Tu panel (solo lectura): {url}",
   historyReset: "Memoria de conversación borrada. Empezamos de cero 🙂",
   needsGoogle: "Primero conecta tu Google aquí: {url} — después seguimos.",
@@ -121,12 +121,12 @@ const es = {
   oauthBadState:
     "Este enlace de Google venció o no lo inició este servidor. Volvé a tocar «Conectar Google».",
   oauthDenied: "Google no dio acceso ({error}). Si cancelaste, podés volver a intentarlo.",
-  setupLinked: "✅ Listo, {name}: esta cuenta quedó vinculada a Roganizo. Volvé a la web para seguir.",
+  setupLinked: "✅ Listo, {name}: esta cuenta quedó vinculada a Reorganizo. Volvé a la web para seguir.",
   setupLinkExpired: "Este enlace de vinculación venció. Generá uno nuevo desde la web.",
   setupTelegramInvalid: "Telegram rechazó el token. Copialo de nuevo desde @BotFather.",
   setupTelegramNoToken: "Primero guardá el token del bot.",
   setupTelegramBusy:
-    "Otro programa está leyendo los mensajes de este bot (¿otra copia de Roganizo corriendo?).",
+    "Otro programa está leyendo los mensajes de este bot (¿otra copia de Reorganizo corriendo?).",
   setupGoogleNotConnected: "Google todavía no está conectado.",
   setupLlmNoKey: "Primero guardá la API key de {provider}.",
 } as const;
@@ -135,9 +135,9 @@ export type MessageKey = keyof typeof es;
 
 const en: Record<MessageKey, string> = {
   startNeedsGoogle:
-    "Hi! I'm Roganizo 🗓\n\nTo get started I need access to your Google Calendar and Google Tasks. Open this and approve:\n{url}\n\nOnce you're done, send me your schedule or whatever you need.",
+    "Hi! I'm Reorganizo 🗓\n\nTo get started I need access to your Google Calendar and Google Tasks. Open this and approve:\n{url}\n\nOnce you're done, send me your schedule or whatever you need.",
   startReady:
-    "Hi! I'm Roganizo 🗓 Tell me what you need: build your schedule, book something, a reminder, a note or a to-do.",
+    "Hi! I'm Reorganizo 🗓 Tell me what you need: build your schedule, book something, a reminder, a note or a to-do.",
   webPanel: "Your dashboard (read-only): {url}",
   historyReset: "Conversation memory wiped. Starting from scratch 🙂",
   needsGoogle: "First connect your Google here: {url} — then we can continue.",
@@ -239,12 +239,12 @@ const en: Record<MessageKey, string> = {
   oauthBadState:
     "This Google link expired or was not started by this server. Tap “Connect Google” again.",
   oauthDenied: "Google did not grant access ({error}). If you cancelled, you can try again.",
-  setupLinked: "✅ Done, {name}: this account is now linked to Roganizo. Go back to the web page to continue.",
+  setupLinked: "✅ Done, {name}: this account is now linked to Reorganizo. Go back to the web page to continue.",
   setupLinkExpired: "This linking link expired. Create a new one from the web page.",
   setupTelegramInvalid: "Telegram rejected the token. Copy it again from @BotFather.",
   setupTelegramNoToken: "Save the bot token first.",
   setupTelegramBusy:
-    "Another program is reading this bot's messages (another copy of Roganizo running?).",
+    "Another program is reading this bot's messages (another copy of Reorganizo running?).",
   setupGoogleNotConnected: "Google is not connected yet.",
   setupLlmNoKey: "Save the {provider} API key first.",
 };

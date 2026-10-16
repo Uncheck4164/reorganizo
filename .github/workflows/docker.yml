@@ -33,7 +33,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: docker.io/${{ vars.DOCKERHUB_USERNAME }}/roganizo
+          images: docker.io/${{ vars.DOCKERHUB_USERNAME }}/reorganizo
           tags: |
             type=raw,value=latest,enable={{is_default_branch}}
             type=semver,pattern={{version}}

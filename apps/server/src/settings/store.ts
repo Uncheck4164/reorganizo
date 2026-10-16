@@ -10,7 +10,7 @@ import * as path from "node:path";
  * db/index.ts, which would create an import cycle (config depends on this).
  */
 
-export const DEFAULT_DATABASE_PATH = "./data/roganizo.db";
+export const DEFAULT_DATABASE_PATH = "./data/reorganizo.db";
 
 type Conn = InstanceType<typeof Database>;
 

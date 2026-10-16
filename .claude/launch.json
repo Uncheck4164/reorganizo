@@ -4,7 +4,7 @@
     {
       "name": "web",
       "runtimeExecutable": "pnpm",
-      "runtimeArgs": ["--filter", "@roganizo/web", "dev"],
+      "runtimeArgs": ["--filter", "@reorganizo/web", "dev"],
       "port": 5173
     }
   ]

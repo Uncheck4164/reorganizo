@@ -130,7 +130,7 @@ const es = {
   "set.lang.es": "Español",
   "set.lang.en": "Inglés",
 
-  "setup.title": "Bienvenido a Roganizo",
+  "setup.title": "Bienvenido a Reorganizo",
   "setup.intro":
     "Te guiamos por cuatro pasos cortos. Podés moverte entre ellos y cambiar todo más tarde desde Ajustes.",
   "setup.checklist": "Falta completar",
@@ -337,7 +337,7 @@ const en: Record<TKey, string> = {
   "set.lang.es": "Spanish",
   "set.lang.en": "English",
 
-  "setup.title": "Welcome to Roganizo",
+  "setup.title": "Welcome to Reorganizo",
   "setup.intro":
     "We will guide you through four short steps. You can move between them and change everything later under Settings.",
   "setup.checklist": "Still missing",

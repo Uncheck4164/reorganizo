@@ -208,7 +208,7 @@ export const GROUP_ORDER: SettingsGroupKey[] = [
   "preferences",
 ];
 
-/** Hues taken from the "Roganizo Web A" design, one per settings group. */
+/** Hues taken from the "Reorganizo Web A" design, one per settings group. */
 export const GROUP_HUE: Record<SettingsGroupKey, number> = {
   telegram: 198,
   model: 285,
@@ -282,9 +282,9 @@ export const SETTINGS_FIELDS: SettingsFieldDef[] = [
   },
   { key: "GOOGLE_CLIENT_ID", group: "google" },
   { key: "GOOGLE_CLIENT_SECRET", group: "google" },
-  { key: "PUBLIC_URL", group: "server", placeholder: "https://roganizo.example.com" },
+  { key: "PUBLIC_URL", group: "server", placeholder: "https://reorganizo.example.com" },
   { key: "PORT", group: "server", placeholder: "8080" },
-  { key: "DATABASE_PATH", group: "server", placeholder: "/data/roganizo.db" },
+  { key: "DATABASE_PATH", group: "server", placeholder: "/data/reorganizo.db" },
   { key: "WEB_PASSWORD", group: "web" },
   { key: "TIMEZONE", group: "preferences", kind: "datalist", options: COMMON_TIMEZONES },
   { key: "BRIEFING_TIME", group: "preferences", kind: "time" },
@@ -321,7 +321,7 @@ const HELP_ES: Partial<Record<SettingsGroupKey, HelpDoc>> = {
         links: [{ label: "@BotFather", url: "https://t.me/BotFather" }],
       },
       {
-        text: "Tocá «Vincular mi cuenta» y abrí el enlace: al iniciar el bot, Roganizo detecta tu ID automáticamente y sólo atiende a esa cuenta.",
+        text: "Tocá «Vincular mi cuenta» y abrí el enlace: al iniciar el bot, Reorganizo detecta tu ID automáticamente y sólo atiende a esa cuenta.",
       },
       {
         text: "CallMeBot es opcional y sirve para las llamadas de urgencia: mandale /start y activá las llamadas desde tu cuenta. Después poné acá tu usuario de Telegram con @. Si lo dejás vacío, no hay llamadas.",
@@ -368,7 +368,7 @@ const HELP_ES: Partial<Record<SettingsGroupKey, HelpDoc>> = {
         links: [{ label: "Nuevo proyecto", url: "https://console.cloud.google.com/projectcreate" }],
       },
       {
-        text: "Activá las dos APIs que usa Roganizo: Google Calendar API y Google Tasks API.",
+        text: "Activá las dos APIs que usa Reorganizo: Google Calendar API y Google Tasks API.",
         links: [
           { label: "Calendar API", url: "https://console.cloud.google.com/apis/library/calendar-json.googleapis.com" },
           { label: "Tasks API", url: "https://console.cloud.google.com/apis/library/tasks.googleapis.com" },
@@ -382,7 +382,7 @@ const HELP_ES: Partial<Record<SettingsGroupKey, HelpDoc>> = {
         text: "En Audiencia, tocá «Publicar app» para dejarla «En producción». En Testing, Google vence el acceso cada 7 días y el bot deja de funcionar a la semana.",
       },
       {
-        text: "Creá un ID de cliente OAuth de tipo «Aplicación web» y agregá como URI de redireccionamiento exactamente la dirección que muestra Roganizo.",
+        text: "Creá un ID de cliente OAuth de tipo «Aplicación web» y agregá como URI de redireccionamiento exactamente la dirección que muestra Reorganizo.",
         links: [{ label: "Credenciales", url: "https://console.cloud.google.com/apis/credentials" }],
       },
       { text: "Copiá el Client ID y el Client secret. En el primer ingreso, si Google dice que no verificó la app, elegí «Configuración avanzada» → «Ir a la app»: es tu propia aplicación." },
@@ -398,7 +398,7 @@ const HELP_EN: Partial<Record<SettingsGroupKey, HelpDoc>> = {
         links: [{ label: "@BotFather", url: "https://t.me/BotFather" }],
       },
       {
-        text: "Choose “Link my account” and open the link: when you start the bot, Roganizo detects your ID automatically and only answers that account.",
+        text: "Choose “Link my account” and open the link: when you start the bot, Reorganizo detects your ID automatically and only answers that account.",
       },
       {
         text: "CallMeBot is optional and powers the urgent calls: send it /start and enable calls from your account. Then put your Telegram username here, with the @. Leave it empty and there are no calls.",
@@ -445,7 +445,7 @@ const HELP_EN: Partial<Record<SettingsGroupKey, HelpDoc>> = {
         links: [{ label: "New project", url: "https://console.cloud.google.com/projectcreate" }],
       },
       {
-        text: "Enable the two APIs Roganizo uses: Google Calendar API and Google Tasks API.",
+        text: "Enable the two APIs Reorganizo uses: Google Calendar API and Google Tasks API.",
         links: [
           { label: "Calendar API", url: "https://console.cloud.google.com/apis/library/calendar-json.googleapis.com" },
           { label: "Tasks API", url: "https://console.cloud.google.com/apis/library/tasks.googleapis.com" },
@@ -459,7 +459,7 @@ const HELP_EN: Partial<Record<SettingsGroupKey, HelpDoc>> = {
         text: "Under Audience, click “Publish app” so its status becomes “In production”. In Testing, Google expires access every 7 days and the bot stops working a week later.",
       },
       {
-        text: "Create an OAuth client ID of type “Web application” and add exactly the redirect URI shown by Roganizo.",
+        text: "Create an OAuth client ID of type “Web application” and add exactly the redirect URI shown by Reorganizo.",
         links: [{ label: "Credentials", url: "https://console.cloud.google.com/apis/credentials" }],
       },
       { text: "Copy the Client ID and Client secret. On the first sign-in, if Google says it has not verified the app, choose “Advanced” → “Go to the app”: it is your own application." },

@@ -1,4 +1,4 @@
-// Per-activity colour algorithm, ported verbatim from the "Roganizo Web A" design:
+// Per-activity colour algorithm, ported verbatim from the "Reorganizo Web A" design:
 // a deterministic hue per title plus a lightness nudge until contrast >= 4.5.
 
 // English names map to the same hues so demo colours stay stable across languages.

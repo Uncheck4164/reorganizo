@@ -1,15 +1,15 @@
 {
-  "name": "roganizo",
+  "name": "reorganizo",
   "private": true,
   "version": "0.1.0",
   "license": "MIT",
   "author": "Ramiro Figueroa (Uncheck4164)",
   "scripts": {
-    "dev": "pnpm --filter @roganizo/server dev",
-    "dev:web": "pnpm --filter @roganizo/web dev",
-    "build": "pnpm --filter @roganizo/web build && pnpm --filter @roganizo/server build",
-    "build:mcp": "pnpm --filter @roganizo/mcp build",
-    "start": "pnpm --filter @roganizo/server start",
+    "dev": "pnpm --filter @reorganizo/server dev",
+    "dev:web": "pnpm --filter @reorganizo/web dev",
+    "build": "pnpm --filter @reorganizo/web build && pnpm --filter @reorganizo/server build",
+    "build:mcp": "pnpm --filter @reorganizo/mcp build",
+    "start": "pnpm --filter @reorganizo/server start",
     "typecheck": "pnpm -r typecheck"
   }
 }

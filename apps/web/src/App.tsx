@@ -83,8 +83,8 @@ function Login({
       >
         <h1 style={{ margin: 0, lineHeight: 0 }}>
           <img
-            src={import.meta.env.BASE_URL + (theme === "dark" ? "logo-lockup-dark.png" : "logo-lockup.png")}
-            alt="roganizo"
+            src={import.meta.env.BASE_URL + (theme === "dark" ? "logo-lockup-dark.svg" : "logo-lockup.svg")}
+            alt="reorganizo"
             style={{ height: "34px", width: "auto", display: "block" }}
           />
         </h1>
@@ -257,8 +257,8 @@ export default function App() {
           <h1 style={{ margin: 0, lineHeight: 0 }}>
             <img
               className="rg-logo"
-              src={import.meta.env.BASE_URL + (theme === "dark" ? "logo-lockup-dark.png" : "logo-lockup.png")}
-              alt="roganizo"
+              src={import.meta.env.BASE_URL + (theme === "dark" ? "logo-lockup-dark.svg" : "logo-lockup.svg")}
+              alt="reorganizo"
               style={{ height: "38px", width: "auto", display: "block" }}
             />
           </h1>
@@ -299,8 +299,8 @@ export default function App() {
           <h1 style={{ margin: 0, lineHeight: 0 }}>
             <img
               className="rg-logo"
-              src={import.meta.env.BASE_URL + (theme === "dark" ? "logo-lockup-dark.png" : "logo-lockup.png")}
-              alt="roganizo"
+              src={import.meta.env.BASE_URL + (theme === "dark" ? "logo-lockup-dark.svg" : "logo-lockup.svg")}
+              alt="reorganizo"
               style={{ height: "38px", width: "auto", display: "block" }}
             />
           </h1>

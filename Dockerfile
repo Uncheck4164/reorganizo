@@ -14,9 +14,9 @@ COPY apps/mcp/package.json apps/mcp/
 RUN pnpm install --frozen-lockfile
 
 COPY apps ./apps
-RUN pnpm --filter @roganizo/web build \
-  && pnpm --filter @roganizo/server build \
-  && pnpm --filter @roganizo/server --prod deploy --legacy /out/server \
+RUN pnpm --filter @reorganizo/web build \
+  && pnpm --filter @reorganizo/server build \
+  && pnpm --filter @reorganizo/server --prod deploy --legacy /out/server \
   && mkdir -p /out/web && cp -r apps/web/dist /out/web/dist
 
 # ── Runtime ──────────────────────────────────────────────────────────
@@ -25,7 +25,7 @@ WORKDIR /app
 COPY --from=build /out /app
 
 ENV NODE_ENV=production
-ENV DATABASE_PATH=/data/roganizo.db
+ENV DATABASE_PATH=/data/reorganizo.db
 ENV PORT=8080
 VOLUME /data
 EXPOSE 8080

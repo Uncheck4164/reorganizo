@@ -28,7 +28,7 @@ both READMEs — nothing else references it.
 
 ## Docker Hub publishing
 
-`.github/workflows/docker.yml` builds and pushes `docker.io/<DOCKERHUB_USERNAME>/roganizo` on
+`.github/workflows/docker.yml` builds and pushes `docker.io/<DOCKERHUB_USERNAME>/reorganizo` on
 every push to `main` (tag `latest`) and on every `v*` git tag (semver tags via
 `docker/metadata-action`). The **entire job is gated** on `vars.DOCKERHUB_USERNAME != ''`, so
 until you configure it the workflow runs and does nothing — no red X, no noise.
@@ -36,7 +36,7 @@ until you configure it the workflow runs and does nothing — no red X, no noise
 To activate it:
 
 1. Create a Docker Hub account at <https://hub.docker.com> if you do not have one.
-2. Create the repository `roganizo` under your account (or let the first push create it — a
+2. Create the repository `reorganizo` under your account (or let the first push create it — a
    public repo is created automatically on push).
 3. Generate an access token: **Account Settings → Personal access tokens → Generate new token**,
    with **Read & Write** permissions. Copy it; it is shown only once.
@@ -48,7 +48,7 @@ To activate it:
 6. Update the README:
    - swap the placeholder Docker badge for the real one — the replacement is already written out
      in an HTML comment right below it, just substitute `TODO-dockerhub-user`;
-   - in the *Quickstart* section, promote the commented-out `docker pull TODO-dockerhub-user/roganizo`
+   - in the *Quickstart* section, promote the commented-out `docker pull TODO-dockerhub-user/reorganizo`
      line into a real code block and drop the "coming soon" paragraph.
 
    Do this in **both** `README.md` and `README.es.md`.
@@ -63,14 +63,14 @@ Releases: tag with `git tag v0.2.0 && git push --tags` to publish version-tagged
 1. Checkout, pnpm 11 (matching the Dockerfile and the `allowBuilds` field in
    `pnpm-workspace.yaml`), Node 22 with the pnpm cache.
 2. `pnpm install --frozen-lockfile` — the whole workspace, so the lockfile stays authoritative.
-3. `VITE_DEMO=1 pnpm --filter @roganizo/web build` — `VITE_DEMO=1` sets the Vite `base` to
-   `/roganizo/` and makes the SPA run against fictional in-memory data with no backend.
+3. `VITE_DEMO=1 pnpm --filter @reorganizo/web build` — `VITE_DEMO=1` sets the Vite `base` to
+   `/reorganizo/` and makes the SPA run against fictional in-memory data with no backend.
 4. `peaceiris/actions-gh-pages@v4` force-pushes `apps/web/dist` to the existing **`gh-pages`**
    branch using the automatic `GITHUB_TOKEN`.
 
 Pages is configured to serve from the `gh-pages` branch (**Settings → Pages → Source: Deploy
 from a branch**), so no change is needed there. The published site is
-<https://uncheck4164.github.io/roganizo/>.
+<https://uncheck4164.github.io/reorganizo/>.
 
 Notes:
 

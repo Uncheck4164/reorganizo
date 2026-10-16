@@ -1,29 +1,29 @@
-# Roganizo
+# Reorganizo
 
 **Your personal assistant on Telegram — talk to it in plain language, and it organizes your Google Calendar, your tasks, your notes and your reminders.**
 
 [![License](https://img.shields.io/badge/License-MIT-black?style=flat)](LICENSE)
-[![Live Demo](https://img.shields.io/badge/Live-Demo-2ea44f?style=flat)](https://uncheck4164.github.io/roganizo/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-2ea44f?style=flat)](https://uncheck4164.github.io/reorganizo/)
 [![Docker](https://img.shields.io/badge/Docker-coming%20soon-2496ED?style=flat&logo=docker&logoColor=white)](#quickstart-docker)
-[![Build](https://img.shields.io/github/actions/workflow/status/Uncheck4164/roganizo/pages.yml?branch=main&style=flat&label=build)](https://github.com/Uncheck4164/roganizo/actions/workflows/pages.yml)
+[![Build](https://img.shields.io/github/actions/workflow/status/Uncheck4164/reorganizo/pages.yml?branch=main&style=flat&label=build)](https://github.com/Uncheck4164/reorganizo/actions/workflows/pages.yml)
 
 <!-- When Docker Hub publishing is enabled (see docs/publishing.md), replace the Docker badge above with:
-[![Docker](https://img.shields.io/docker/v/TODO-dockerhub-user/roganizo?style=flat&logo=docker&logoColor=white&label=docker)](https://hub.docker.com/r/TODO-dockerhub-user/roganizo)
+[![Docker](https://img.shields.io/docker/v/TODO-dockerhub-user/reorganizo?style=flat&logo=docker&logoColor=white&label=docker)](https://hub.docker.com/r/TODO-dockerhub-user/reorganizo)
 -->
 
 [![LANG ENGLISH](https://img.shields.io/badge/LANG-ENGLISH-0b7285?style=flat)](README.md)
 [![LANG ESPAÑOL](https://img.shields.io/badge/LANG-ESPA%C3%91OL-adb5bd?style=flat)](README.es.md)
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=flat&logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/TODO-bmc-user)
 
-Roganizo is a **single-user** assistant. You write to it on **Telegram** the same way you would
+Reorganizo is a **single-user** assistant. You write to it on **Telegram** the same way you would
 write to a friend, and it turns that into real events in **Google Calendar**, to-dos in
 **Google Tasks**, notes and reminders. It also ships a **read-only web panel** (calendar,
 to-dos, notes and stats) protected by a password — every change goes through the bot, so nobody
 else can touch anything.
 
-![Roganizo — web panel](docs/screenshot-dark.png)
+![Reorganizo — web panel](docs/screenshot-dark.png)
 
-**🔗 [Live demo](https://uncheck4164.github.io/roganizo/)** — the web panel with fictional data
+**🔗 [Live demo](https://uncheck4164.github.io/reorganizo/)** — the web panel with fictional data
 and no backend. The bot and the real synchronization require self-hosting.
 
 ## What it can do
@@ -51,9 +51,9 @@ volume.
 Start the container with no configuration at all and set everything up from your browser.
 
 ```bash
-docker build -t roganizo .
-docker run -d --name roganizo --restart unless-stopped \
-  -v roganizo-data:/data -p 8080:8080 roganizo
+docker build -t reorganizo .
+docker run -d --name reorganizo --restart unless-stopped \
+  -v reorganizo-data:/data -p 8080:8080 reorganizo
 ```
 
 Open **http://localhost:8080** and follow the four-step assistant:
@@ -79,18 +79,18 @@ If you already have your credentials, you can pass them as environment variables
 
 ```bash
 cp .env.example .env   # fill in your credentials
-docker build -t roganizo .
-docker run -d --name roganizo --restart unless-stopped \
-  --env-file .env -v roganizo-data:/data -p 8080:8080 roganizo
+docker build -t reorganizo .
+docker run -d --name reorganizo --restart unless-stopped \
+  --env-file .env -v reorganizo-data:/data -p 8080:8080 reorganizo
 ```
 
 Both paths can be mixed: anything missing from `.env` can be completed later from the browser,
 and anything you change in the browser takes precedence.
 
 <!-- Coming soon: prebuilt image on Docker Hub (see docs/publishing.md)
-docker pull TODO-dockerhub-user/roganizo
+docker pull TODO-dockerhub-user/reorganizo
 -->
-**Coming soon:** a prebuilt image (`docker pull TODO-dockerhub-user/roganizo`), so you will not
+**Coming soon:** a prebuilt image (`docker pull TODO-dockerhub-user/reorganizo`), so you will not
 even need to build it yourself.
 
 Since everything is a plain `Dockerfile`, this also runs unchanged on any Dockerfile-based PaaS
@@ -106,9 +106,9 @@ OpenRouter). Everything below is free except the model usage.
 
 1. Open Telegram and talk to **[@BotFather](https://t.me/BotFather)**.
 2. Send `/newbot`.
-3. It asks for a **display name** — anything you like, for example `Roganizo`.
+3. It asks for a **display name** — anything you like, for example `Reorganizo`.
 4. It asks for a **username** — it must be unique and **end in `bot`**, for example
-   `roganizo_ramiro_bot`.
+   `reorganizo_ramiro_bot`.
 5. BotFather replies with a **token** that looks like `123456789:AAE...`. Copy it — that is
    `TELEGRAM_BOT_TOKEN`.
 6. Your **numeric user ID** (`TELEGRAM_ALLOWED_USER_ID`, the only account the bot answers) is
@@ -118,7 +118,7 @@ OpenRouter). Everything below is free except the model usage.
 <details>
 <summary><b>Optional — phone calls for urgent reminders (CallMeBot)</b></summary>
 
-If you want Roganizo to actually **call you on Telegram** when you do not confirm an urgent
+If you want Reorganizo to actually **call you on Telegram** when you do not confirm an urgent
 reminder, you need to authorize CallMeBot once:
 
 1. Send `/start` to **[@CallMeBot_txtbot](https://t.me/CallMeBot_txtbot)** (this is the
@@ -143,7 +143,7 @@ changes, follow the instructions on their site.
 4. Go to the **OAuth consent screen**: audience **External**, any app name, your email as
    support and contact. Then press **Publish app** to move it out of *Testing*. You do **not**
    need Google to verify it — you are the only user, and the "unverified app" warning is a
-   one-time *Advanced → Go to Roganizo* click during authorization.
+   one-time *Advanced → Go to Reorganizo* click during authorization.
 5. Go to **APIs & Services → Credentials → Create credentials → OAuth client ID**.
 6. Application type: **Web application**.
 7. Under **Authorized redirect URIs**, add your callback. The Google step of the setup page
@@ -182,7 +182,7 @@ key is required.
 
 ## Configuration
 
-You can configure Roganizo in two ways, and you can freely mix them:
+You can configure Reorganizo in two ways, and you can freely mix them:
 
 - **From the browser** — open the panel and click the **gear icon** to reach the settings screen.
   It has built-in step-by-step help for each provider, and the values are saved in SQLite.
@@ -219,7 +219,7 @@ themselves live*, and `PORT`, which has to match the port your container or PaaS
 | `LANGUAGE` | `es` or `en` (default `es`) — language of the bot and the morning briefing. The web panel has its own ES/EN toggle |
 | `TIMEZONE` | Default `America/Santiago` |
 | `BRIEFING_TIME` | Morning briefing time, `HH:mm` (empty = disabled) |
-| `DATABASE_PATH` | **Environment only.** Default `/data/roganizo.db` in Docker |
+| `DATABASE_PATH` | **Environment only.** Default `/data/reorganizo.db` in Docker |
 
 ## Local development
 
@@ -321,7 +321,7 @@ MIT — see [LICENSE](LICENSE).
 
 ## Support
 
-If Roganizo saves you time, you can
+If Reorganizo saves you time, you can
 [buy me a coffee](https://buymeacoffee.com/TODO-bmc-user) ☕. Entirely optional — the project is
 free, self-hosted and will stay that way. Starring the repository or reporting an issue helps
 just as much.
